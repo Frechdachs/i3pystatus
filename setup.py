@@ -23,6 +23,7 @@ setup(name="i3pystatus",
           "i3pystatus.pulseaudio",
           "i3pystatus.updates",
           "i3pystatus.weather",
+          "i3pystatus.utils",
       ],
       entry_points={
           "console_scripts": [
