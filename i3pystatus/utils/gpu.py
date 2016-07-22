@@ -40,4 +40,10 @@ def query_nvidia_smi() -> GPUUsageInfo:
     # If value contains 'not' - it is not supported for this GPU (in fact, for now nvidia-smi returns '[Not Supported]')
     values = [None if ("not" in value.lower()) else int(value) for value in values]
 
+    output = subprocess.check_output(["nvidia-settings", "-q", "GPUUtilization"])
+    output = output.decode('utf-8').strip()
+    output = output.split("=")[1].split(",")[0]
+
+    values[5] = output
+
     return GPUUsageInfo(*values)
