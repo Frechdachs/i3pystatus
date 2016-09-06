@@ -31,7 +31,7 @@ MOCK_MODULES = [
     "requests",
     "bs4",
     "dota2py",
-    "novaclient.v2",
+    "novaclient",
     "speedtest_cli",
     "pyzabbix",
     "vk",
@@ -40,8 +40,10 @@ MOCK_MODULES = [
     "httplib2",
     "oauth2client",
     "apiclient",
-    "googleapiclient.errors"
-
+    "googleapiclient.errors",
+    "vlc",
+    "dateutil.tz",
+    "i3ipc",
 ]
 
 for mod_name in MOCK_MODULES:
